@@ -1,14 +1,14 @@
 import React, {Component} from 'react';
 import {Route, BrowserRouter, Switch} from 'react-router-dom';
 import Home from './Components/Home';
-import About from './Components/About';
+import Characters from './Components/Characters';
 
 export default class Router extends Component{
     render(){
         return(
             <BrowserRouter>
                 <Switch>
-                    <Route path="/About" component={About} />
+                    <Route path="/Characters" component={Characters} />
                     <Route path="/" component={Home} />
                 </Switch>
             </BrowserRouter>
