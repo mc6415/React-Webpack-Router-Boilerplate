@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+// const BundleAnaylzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
     entry: [
@@ -11,6 +12,10 @@ module.exports = {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use: ['babel-loader']
+            },
+            {
+                test: /\.scss$/,
+                use: ['style-loader', 'css-loader', 'sass-loader']
             }
         ]
     },
@@ -23,11 +28,13 @@ module.exports = {
         filename: 'bundle.js'
     },
     plugins: [
+        // new BundleAnaylzerPlugin(),
         new webpack.HotModuleReplacementPlugin()
     ],
     devServer: {
         historyApiFallback: true,
         contentBase: './dist',
-        hot: true
+        hot: true,
+        disableHostCheck: true
     }
 };

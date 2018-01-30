@@ -89,7 +89,7 @@ class Home extends Component{
                             </Grid.Column>
                             <Grid.Column floated='right' width={6}>
                                 <Image bordered rounded size='large'
-                                       src='https://img.gifglobe.com/grabs/peepshow/S04E02/gif/YiN7b8BDnpvL.gif' />
+                                       src='https://react.semantic-ui.com/assets/images/wireframe/white-image.png' />
                             </Grid.Column>
                         </Grid.Row>
                         <Grid.Row>
